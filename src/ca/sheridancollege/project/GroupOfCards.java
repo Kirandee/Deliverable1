@@ -7,6 +7,7 @@ package ca.sheridancollege.project;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.List;
 
 /**
  * A concrete class that represents any grouping of cards for a Game.
@@ -14,30 +15,39 @@ import java.util.Collections;
  * The group of cards has a maximum size attribute which is flexible for reuse.
  * @author Sivagama
  */
-public class GroupOfCards 
+public class GroupOfCards
 {
    
     //The group of cards, stored in an ArrayList
-    private ArrayList <Card> cards;
+    private List <CrazyEights> cards;
     private int size;//the size of the grouping
+    
+
+    
     
     public GroupOfCards(int givenSize)
     {
         size = givenSize;
     }
     
+     public GroupOfCards()
+    {
+        this.size = 0;
+    }
+    
+   
     /**
      * A method that will get the group of cards as an ArrayList
      * @return the group of cards.
      */
-    public ArrayList<Card> showCards()
+    public List<CrazyEights> showCards() 
     {
-        return cards;
+        return getCards();
     }
     
     public void shuffle()
     {
-        Collections.shuffle(cards);
+       Collections.shuffle(getCards());
     }
 
     /**
@@ -52,6 +62,20 @@ public class GroupOfCards
      */
     public void setSize(int givenSize) {
         size = givenSize;
+    }
+
+    /**
+     * @return the cards
+     */
+    public  List <CrazyEights> getCards() {
+        return cards;
+    }
+
+    /**
+     * @param aCards the cards to set
+     */
+    public  void setCards(List <CrazyEights> aCards) {
+        cards = aCards;
     }
     
 }//end class

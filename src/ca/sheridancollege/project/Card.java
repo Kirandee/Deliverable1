@@ -11,9 +11,9 @@ package ca.sheridancollege.project;
  * should remember to add themselves as a modifier.
  * @author Sivagama
  */
-@SuppressWarnings("all")
 public abstract class Card 
 {
+    
     //default modifier for child classes
     
     /**

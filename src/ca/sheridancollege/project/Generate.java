@@ -18,6 +18,7 @@ public class Generate {
      public int numberofCards = 52;
     
      CrazyEights deck[] = new CrazyEights[52];
+      // CrazyEights deck1[] = new CrazyEights[7];
     
    
    public void generate(){
@@ -31,6 +32,9 @@ public class Generate {
  // List l= Arrays.asList(deck);
    Collections.shuffle(Arrays.asList(deck));
    }
+     
+  public void draw(){
+
   
-  
+}
 }

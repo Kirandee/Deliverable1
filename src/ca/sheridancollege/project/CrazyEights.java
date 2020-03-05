@@ -9,12 +9,15 @@ package ca.sheridancollege.project;
  *
  * @author Kiran
  */
-public class CrazyEights extends Card {
 
+public class CrazyEights extends Card { 
+ public enum Suits{HEARTS,CLUBS,DIAMONDS,SPADES};
+  public  enum Value{ONE,TWO,THREE,FOUR,FIVE,SIX,SEVEN,EIGHT,NINE,TEN,KING,JACK,QUEEN};
     
-        public enum Suits{HEARTS,CLUBS,DIAMONDS,SPADES};
+        
+        
     private Suits suit;
-      public enum Value{ONE,TWO,THREE,FOUR,FIVE,SIX,SEVEN,EIGHT,NINE,TEN,KING,JACK,QUEEN};
+    
       private Value value;
       public CrazyEights(Suits s, Value v){
      this.suit=s;
@@ -50,8 +53,9 @@ public class CrazyEights extends Card {
         this.value = value;
     }
     
+        @Override
     public String toString(){
-    return  "";
+    return String.format("Card value is:  %s, Card Suit is :  %s ", value, suit);
     }
     
     
